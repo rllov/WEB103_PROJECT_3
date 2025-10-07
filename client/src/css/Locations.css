@@ -1,0 +1,29 @@
+.locations-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin: 2rem 0;
+}
+.location-card {
+  background: url("/images/parchment.png"), #f9f6ef;
+  border: 2px solid #ffe066;
+  border-radius: 12px;
+  padding: 2rem;
+  color: #ffe066;
+  font-family: "Cinzel", serif;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+.location-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 16px #ffe06688;
+  background: #3e5c3a;
+}
+
+.location-card:hover h3 {
+  color: white;
+}

@@ -1,0 +1,19 @@
+header,
+nav {
+  background: #4b2e83;
+  color: #f9f6ef;
+  padding: 1rem 2rem;
+  font-family: "UnifrakturCook", cursive;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+nav a {
+  color: #ffe066;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-size: 1.2rem;
+  transition: color 0.2s;
+}
+nav a:hover {
+  color: #fff;
+  text-shadow: 0 0 8px #ffe066;
+}

@@ -1,0 +1,13 @@
+.title {
+  color: white;
+}
+
+.events-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding-bottom: 1rem;
+  margin: 1rem 0;
+}

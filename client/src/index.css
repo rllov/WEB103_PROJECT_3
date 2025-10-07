@@ -1,0 +1,7 @@
+body {
+  background: linear-gradient(135deg, #2e1a47 0%, #3e5c3a 100%);
+  min-height: 100vh;
+  font-family: "Cinzel", serif;
+  color: #f9f6ef;
+  margin: 0;
+}

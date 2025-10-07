@@ -1,0 +1,71 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.events-container .sub-title {
+  color: #f9f6ef;
+  font-family: "Cinzel", serif;
+}
+
+/* ===========================================
+Event cards
+===========================================*/
+.event-flip-card {
+  background: none;
+  width: 480px;
+  height: 360px;
+  perspective: 1000px;
+  margin: 1rem;
+  display: inline-block;
+}
+
+.event-flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.7s cubic-bezier(0.4, 2, 0.6, 1);
+  transform-style: preserve-3d;
+}
+
+.event-flip-card:hover .event-flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.event-flip-card-front,
+.event-flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 16px;
+  overflow: scroll;
+  box-shadow: 0 4px 16px rgba(50, 30, 10, 0.15);
+}
+
+.event-flip-card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.event-flip-card-back {
+  background: url("/images/parchment.png"), #f9f6ef;
+  color: #3d2c1e;
+  transform: rotateY(180deg);
+  padding: 1.5rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  overflow-y: auto; /* <-- allows scrolling if content is too long */
+}
+
+.event-flip-card-back h3 {
+  font-family: "UnifrakturCook", cursive;
+  font-size: 1.5rem;
+  color: #5a3e1b;
+  margin-top: 0;
+}
