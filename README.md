@@ -40,7 +40,7 @@ Here's a walkthrough of implemented required features:
 <img src='./client/public/MysticalWorldEvents.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 Heres a youtube link if gif is not working.
 
-https://youtu.be/5nKda0jXuZA
+https://youtu.be/KE4GEnSL66k
 
 ## Notes
 
