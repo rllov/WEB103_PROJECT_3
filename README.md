@@ -1,10 +1,10 @@
-# WEB103 Project 3 - Mystical World Event Board
+# WEB103 Project 4 - Custom World Event Board
 
 Submitted by: Ryan Lov
 
-About this web app: **This web app allows users to view and manage events in a mystical world setting. Users can explore different locations, view events associated with those locations, and get detailed information about each event.**
+About this web app: **This web app allows users to view, edit, delete, and manage events in a mystical world setting. Users can explore different locations, view events associated with those locations, and get detailed information about each event. Users can also create new events and customize their details.**
 
-Time spent: **~9** hours
+Time spent: **13** hours
 
 ## Required Features
 
@@ -12,22 +12,25 @@ The following **required** functionality is completed:
 
 <!-- Make sure to check off completed functionality below -->
 
-- [x] **The web app uses React to display data from the API**
-- [x] **The web app is connected to a PostgreSQL database, with an appropriately structured Events table**
+- [x] **The web app uses React to display data from the API.**
+- [x] **The web app is connected to a PostgreSQL database, with an appropriately structured `CustomItem` table.**
   - [x] **NOTE: Your walkthrough added to the README must include a view of your Render dashboard demonstrating that your Postgres database is available**
   - [x] **NOTE: Your walkthrough added to the README must include a demonstration of your table contents. Use the psql command 'SELECT \* FROM tablename;' to display your table contents.**
-- [x] **The web app displays a title.**
-- [x] **Website includes a visual interface that allows users to select a location they would like to view.**
-  - [x] _Note: A non-visual list of links to different locations is insufficient._
-- [x] **Each location has a detail page with its own unique URL.**
-- [x] **Clicking on a location navigates to its corresponding detail page and displays list of all events from the `events` table associated with that location.**
+- [x] **Users can view **multiple** features of the `CustomItem` (e.g. car) they can customize, (e.g. wheels, exterior, etc.)**
+- [x] **Each customizable feature has multiple options to choose from (e.g. exterior could be red, blue, black, etc.)**
+- [x] **On selecting each option, the displayed visual icon for the `CustomItem` updates to match the option the user chose.**
+- [x] **The price of the `CustomItem` (e.g. car) changes dynamically as different options are selected _OR_ The app displays the total price of all features.**
+- [x] **The visual interface changes in response to at least one customizable feature.**
+- [x] **The user can submit their choices to save the item to the list of created `CustomItem`s.**
+- [x] **If a user submits a feature combo that is impossible, they should receive an appropriate error message and the item should not be saved to the database.**
+- [x] **Users can view a list of all submitted `CustomItem`s.**
+- [x] **Users can edit a submitted `CustomItem` from the list view of submitted `CustomItem`s.**
+- [x] **Users can delete a submitted `CustomItem` from the list view of submitted `CustomItem`s.**
+- [x] **Users can update or delete `CustomItem`s that have been created from the detail page.**
 
 The following **optional** features are implemented:
 
-- [ ] An additional page shows all possible events
-  - [ ] Users can sort _or_ filter events by location.
-- [ ] Events display a countdown showing the time remaining before that event
-  - [ ] Events appear with different formatting when the event has passed (ex. negative time, indication the event has passed, crossed out, etc.).
+- [ ] Selecting particular options prevents incompatible options from being selected even before form submission
 
 The following **additional** features are implemented:
 
@@ -37,18 +40,27 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-<img src='./client/public/MysticalWorldEvents.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-Heres a youtube link if gif is not working.
+<img src='client/public/CustomizedWorldEvents.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-https://youtu.be/KE4GEnSL66k
+Here is a youtube link if it does not work:
+https://youtu.be/l92__7jK8_g
+
+<!-- Replace this with whatever GIF tool you used! -->
+
+GIF created with ... GIF tool here
+
+<!-- Recommended tools:
+[Kap](https://getkap.co/) for macOS
+[ScreenToGif](https://www.screentogif.com/) for Windows
+[peek](https://github.com/phw/peek) for Linux. -->
 
 ## Notes
 
-Describe any challenges encountered while building the app or any additional context you'd like to add.
+Describe any challenges encountered while building the app or any additional context you'd like to add. - The inconsistent naming conventions were difficult because - Server used hostedBy in the req.body to interact with the client - Server needed to map hostedBy to hosted_by when interacting with the database - On formData objected used hostedBy but the name attribute in the input field was soemtimes hostedby or hosted_by. - Mismatch of the hostedBy, hosted_by, hostedby let the field be undefined or not sent correctly to the server
 
 ## License
 
-Copyright [2025] Ryan Lov
+Copyright [2025] [Ryan Lov]
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 

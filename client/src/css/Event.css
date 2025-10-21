@@ -69,3 +69,10 @@ Event cards
   color: #5a3e1b;
   margin-top: 0;
 }
+
+.top-container img {
+  float: right;
+  max-height: 40px;
+  margin-top: 10px;
+  margin-right: 8px;
+}
