@@ -1,6 +1,7 @@
 import express from "express";
 import "./config/dotenv.js";
 import events from "./routes/events.js";
+import customcars from "./routes/customcars.js";
 import cors from "cors";
 
 const app = express();
@@ -9,6 +10,7 @@ app.use(cors());
 app.use(express.json());
 
 app.use("/events", events);
+app.use("/customcars", customcars);
 
 app.get("/", (req, res) => {
   res
