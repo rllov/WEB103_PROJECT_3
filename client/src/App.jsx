@@ -6,6 +6,9 @@ import Locations from "./pages/Locations";
 import LocationEvents from "./pages/LocationEvents";
 import CreateEvent from "./pages/CreateEvent";
 import EditEvent from "./pages/EditEvent";
+import Customize from "./pages/Customize";
+import CustomCarList from "./pages/CustomCarList";
+import CustomCarEdit from "./pages/CustomCarEdit";
 import "@picocss/pico";
 const App = () => {
   const [events, setEvents] = useState([]);
@@ -22,13 +25,25 @@ const App = () => {
 
   // Sets up routes
   let element = useRoutes([
-    {
-      path: "/",
-      element: <Events data={events} />,
-    },
+    // {
+    //   path: "/",
+    //   element: <Events data={events} />,
+    // },
     {
       path: "/locations",
       element: <Locations />,
+    },
+    {
+      path: "/customize",
+      element: <Customize />,
+    },
+    {
+      path: "/customcars",
+      element: <CustomCarList />,
+    },
+    {
+      path: "/customcars/edit/:id",
+      element: <CustomCarEdit />,
     },
     {
       path: "/locations/:location",
@@ -51,12 +66,18 @@ const App = () => {
   return (
     <div className="App">
       <header>
-        <nav>
+        {/* <nav>
           <Link to="/">All Events</Link> | Mystical World Event Boards |{" "}
           <Link to="/locations">Locations</Link>
         </nav>
         <Link to="/new">
           <button className="addBtn">+ Add Event</button>
+        </Link> */}
+        <Link to="/customize">
+          <button className="addBtn">Customize Car</button>
+        </Link>
+        <Link to="/customcars">
+          <button className="addBtn">My Custom Cars</button>
         </Link>
       </header>
       {element}

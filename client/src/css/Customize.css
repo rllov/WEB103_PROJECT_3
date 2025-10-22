@@ -1,0 +1,43 @@
+.customize {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+}
+.customize form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.car-preview {
+  height: 120px;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.price {
+  font-weight: 700;
+}
+.error {
+  color: red;
+}
+.car-preview .engine {
+  font-weight: 700;
+}
+.car-preview.color-red {
+  background: #ffdddd;
+}
+.car-preview.color-blue {
+  background: #ddeeff;
+}
+.car-preview.color-green {
+  background: #e8ffea;
+}
+.car-preview.color-black {
+  background: #ccc;
+}
+.car-preview.color-white {
+  background: #f8f8f8;
+}

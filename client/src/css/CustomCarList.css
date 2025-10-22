@@ -1,0 +1,17 @@
+.customcar-list {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: white;
+}
+.customcar-list ul {
+  list-style: none;
+  padding: 0;
+}
+.customcar-list li {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+.customcar-list button {
+  margin-top: 8px;
+}

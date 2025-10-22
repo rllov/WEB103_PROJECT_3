@@ -28,6 +28,45 @@ The following **required** functionality is completed:
 - [x] **Users can delete a submitted `CustomItem` from the list view of submitted `CustomItem`s.**
 - [x] **Users can update or delete `CustomItem`s that have been created from the detail page.**
 
+### How to run locally
+
+1. Start the server (this will recreate and seed the `events` and `customcars` tables):
+
+```bash
+cd server
+npm install
+npm run reset
+npm run start
+```
+
+2. Start the client:
+
+```bash
+cd client
+npm install
+npm run dev
+```
+
+3. Open the app at `http://localhost:5173` and the API at `http://localhost:3001`.
+
+### Database verification (for graders)
+
+- After running `npm run reset` in `server`, connect to your Postgres instance and run:
+
+```sql
+SELECT * FROM customcars;
+\d customcars
+```
+
+- Include a screenshot of the `\d customcars` output in your submission as proof the table exists and is seeded.
+
+### Implemented CustomCar features
+
+- A new customization page is available at `/customize` where users can pick `color`, `wheels`, `engine`, and optional extras. The UI previews the selected color and shows engine/wheels labels.
+- The total price is calculated dynamically as options are chosen.
+- The user can save a custom car; saved cars are visible under `/customcars`.
+- Server-side validation prevents impossible combos (for example, Electric engine + Offroad wheels) and returns a 400 with a message; the client displays the message.
+
 The following **optional** features are implemented:
 
 - [ ] Selecting particular options prevents incompatible options from being selected even before form submission
